@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E-Commerce de Ropa</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/CSS/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -26,7 +26,6 @@
       <p>Encuentra la mejor ropa urbana al mejor precio</p>
     </section>
 
-<!-- Filtro / Buscador -->
 <section class="filtro-container">
   <input type="text" placeholder="Buscar producto..." class="filtro-input">
   
@@ -69,7 +68,7 @@
     </div>
   </div>
 </section>
-<!-- Carrusel de Categorías -->
+
 <section class="categorias-section">
   <h2>Categorías de Prendas</h2>
   <div class="categorias-carrusel">
@@ -131,24 +130,32 @@
     </section>
 
     <section id="contacto" class="contacto">
-      <h2>Contacto</h2>
-      <form action="https://formspree.io/f/tu-form-id" method="POST">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required />
+  <h2>Contacto</h2>
+  <form>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required>
 
-        <label for="email">Correo Electrónico</label>
-        <input type="email" id="email" name="email" required />
+    <label for="email">Correo Electrónico</label>
+    <input type="email" id="email" name="email" required>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" required></textarea>
 
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="popup" class="popup">
+    <p>¡Gracias por tu mensaje! Te responderemos pronto 💬</p>
+    <button id="cerrar-popup">Cerrar</button>
+  </div>
+</section>
+
   </main>
 
   <footer>
     <p>&copy; 2025 Moda Urbana - Todos los derechos reservados.</p>
   </footer>
+  <script src="/JS/script.js"></script>
+
 </body>
 </html>
