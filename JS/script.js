@@ -11,3 +11,9 @@ form.addEventListener('submit', (e) => {
 cerrarPopup.addEventListener('click', () => {
   popup.classList.remove('active'); 
 });
+document.querySelectorAll('.categoria-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const category = card.dataset.category;
+    window.location.href = `productos.html?categoria=${category}`;
+  });
+});

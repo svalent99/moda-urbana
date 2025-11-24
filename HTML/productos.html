@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Productos</title>
+
+  <style>
+    body { font-family: Arial; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #333;
+      color: white;
+    }
+
+    .carrito-icon {
+      font-size: 22px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .carrito-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 3px 7px;
+      font-size: 12px;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .producto-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    .producto-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .btn-carrito {
+      margin-top: 10px;
+      background: #333;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .carrito-panel {
+      position: fixed;
+      top: 70px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 9999;
+    }
+
+    .carrito-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .carrito-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .btn-comprar {
+      width: 100%;
+      padding: 10px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2 id="categoria-title"></h2>
+
+  <div class="carrito-icon" id="carritoBtn">
+      🛒 <span class="carrito-count" id="carritoCount">0</span>
+  </div>
+</header>
+
+<div id="carritoPanel" class="carrito-panel">
+  <h3>Carrito</h3>
+  <div id="carritoLista"></div>
+  <p id="carritoTotal" class="carrito-total"></p>
+  <button id="btnComprar" class="btn-comprar">Completar compra</button>
+</div>
+
+<div class="productos-grid" id="productosContainer"></div>
+
+<script src="../JS/productos.js"></script>
+
+</body>
+</html>
